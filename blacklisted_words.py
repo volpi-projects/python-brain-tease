@@ -12,9 +12,11 @@ def filter_blacklist(input):
     #(basically padding the word with spaces to make them 
     #distict words)
     padded_word= " "+ black_word +" "
+    #to check if black listed word is the last word in the sentence
     if input.endswith(black_word):
         print("unsafe") 
         break
+    #check if distint padded word is in the sentence
     if padded_word in input:
         print("unsafe")
         break   
